@@ -8,7 +8,7 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
 
 /*声明Hystrix监视窗应用，实现服务状态监视*/
 @EnableHystrixDashboard
-
+@EnableDiscoveryClient
 @SpringBootApplication
 public class HytrixApplication {
 
