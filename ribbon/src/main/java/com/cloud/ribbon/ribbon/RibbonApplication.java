@@ -31,15 +31,20 @@ public class RibbonApplication {
     @Autowired
     private RestTemplateBuilder builder;
 
+
     @Bean
     @LoadBalanced
     public RestTemplate restTemplate(){
         HttpComponentsClientHttpRequestFactory httpRequestFactory =  new HttpComponentsClientHttpRequestFactory();
+
+        //设置超时信息
         httpRequestFactory.setReadTimeout(5000);
         httpRequestFactory.setConnectTimeout(5000);
         return new RestTemplate(httpRequestFactory);
     }
 
+
+    //添加servletBean以实现hystrix注解监控
     @Bean
     public ServletRegistrationBean getServlet(){
         HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();

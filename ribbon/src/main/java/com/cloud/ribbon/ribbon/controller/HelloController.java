@@ -16,16 +16,14 @@ import java.util.Random;
 public class HelloController {
     @Autowired
     private HelloService helloService;
-   // @Configuration
-  //  @RibbonClient(name = "ribbon-provider",configuration = HelloServiceConfiguration.class)
-  //  public class RibbonConfiguration{}
-    @HystrixCommand
+
+
+    @HystrixCommand//注解实现监控sayHello方法
     @RequestMapping(value = "/hello",method = RequestMethod.GET)
     public String sayHello(@RequestParam String name) throws Exception{
-
+        //模拟请求超时延时信息
         int sleepTime = new Random().nextInt(3000);
         Thread.sleep(sleepTime);
-        //ServiceInstance instance = client.getLocalhostServiceInstance();
         return helloService.sayHello() + " " + name;
     }
 }
