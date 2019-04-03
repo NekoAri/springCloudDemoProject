@@ -7,6 +7,9 @@ import org.slf4j.LoggerFactory;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * Zuul过滤器设置，验证token，正确执行转发，错误拦截
+ */
 public class AccessFilter extends ZuulFilter {
     private static Logger log = LoggerFactory.getLogger(AccessFilter.class);
 
