@@ -17,7 +17,7 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableCircuitBreaker//打开架空断路器
+@EnableCircuitBreaker
 @EnableHystrix
 @EnableHystrixDashboard
 public class RibbonConsumerApplication {
@@ -30,14 +30,11 @@ public class RibbonConsumerApplication {
     private RestTemplateBuilder builder;
 
     @Bean
-    @LoadBalanced//负载均衡
+    @LoadBalanced
     public RestTemplate restTemplate(){
         return builder.build();
     }
 
-
-
-    //添加ServletBean提供监控类
     @Bean
     public ServletRegistrationBean getServlet(){
         HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();
