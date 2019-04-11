@@ -17,3 +17,9 @@
     实现ribbon服务消费者
 ##turbine
     实现集群监控
+##config_server
+    分布式配置中心服务
+##config_client
+    分布式配置中心客户端
+##config_repo
+    分布式配置文件
