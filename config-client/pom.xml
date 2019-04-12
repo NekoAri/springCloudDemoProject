@@ -40,8 +40,21 @@
             <version>2.1.1.RELEASE</version>
         </dependency>
 
-
-
+        <!--rabbitMQ总线依赖
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>
+        -->
+        <!--kafka总线依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-kafka</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
         <!--失败重试响应依赖-->
         <dependency>
             <groupId>org.springframework.retry</groupId>
