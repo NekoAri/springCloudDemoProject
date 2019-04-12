@@ -6,7 +6,7 @@
 ## eureka
 >* Eureka注册中心
 ## feign_consumer 
->* feign消费者，实现服务提供者生命调用
+>* feign消费者，实现ribbon服务提供者声明调用
 ## hello_service_api
 >* hello_service实体类无需运行，只需在运行前构建
 ## hystrix 
