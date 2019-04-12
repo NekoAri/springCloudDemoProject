@@ -1,4 +1,5 @@
-# springCloudDemoProject
+springCloudDemoProject
+=============================================
 ##### SpringCloudDemo&lt;&lt;create on IntelliJ IDEA>> Some demofunctions of SpringCloud.
 ## 基本环境
 >* IDE:IntelliJ IDEA
@@ -6,9 +7,11 @@
 >* rabbitMQ:3.7.1
 >* kfka:2.12-2.2.0
 >* zookeeper: kafka自带
-
-### 运行前需要检查配置端口号是否被占用！！
-
+---------------------------------------------
+运行前需要检查配置端口号是否被占用！！
+=============================================
+MODULE信息
+---------------------------------------------
 ## api_gateway 
 >* Zuul网关，实现URL转发
 
@@ -40,7 +43,7 @@
 >>* 利用zookeeper和kafka总线（目前配置）
 
 ## config_client
->* 千万注意properties文件内配置信息的顺序！！！启用上下文规则！！！
+>* 千万注意properties文件内配置信息的顺序！！！注意启用上下文规则！！！（被坑了很久一直起不来，已修正）
 >* 分布式配置中心客户端
 >* 添加消息总线配置
 >>* 利用rabbitMQ总线（已被注释）
