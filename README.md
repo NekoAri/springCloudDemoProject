@@ -22,5 +22,10 @@
 ## config_client
 >* 分布式配置中心客户端
 >* 千万注意properties文件内配置信息的顺序！！！启用上下文规则！！！
+>* 添加消息总线配置
+>>* 利用rabbitMQ总线
+>>* 利用zookeeper和kafka总线
 ## config_repo
 >* 分布式配置文件
+## rabbitmq_hello
+>* rabbitMQ消息总线配置
